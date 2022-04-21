@@ -72,7 +72,7 @@ It is important to load the same fonts into the editor so you can see the texts 
 
 For doing this, I created the `fontsloader` plugin, in the `phasereditor2d-plugins` folder. Look in the `phasereditor2d.config.json` file I configured the plugins path to `phasereditor2d-plugins`.
 
-Here I'm not going to explain how the Phaser Editor 2D plugins work. But you can take a look to the files in the plugin. What it does is: 
+Here I'm not going to explain how the Phaser Editor 2D plugins work. But you can take a look at the files in the plugin. What it does is: 
 
 * Load the styles with the font definitions (`phasereditor2d-plugins/fontsloader/`). It `@import` the same `fonts.css` file of the game.
 
@@ -135,7 +135,7 @@ Webpack is configured to include the content hash of a file defined in an asset 
 
 * Because Webpack automatically imports the pack files, those are excluded in the **CopyPlugin** configuration. By convention, name the pack files like this `[any name]-pack.json`.
 
-* The NPM `build` script calls the `phaser-asset-pack-hashing` tool. It parses all pack files in the `dist/` folder and transform the internal URL, adding the content-hash to the query string. It also parses files referenced by the pack. For example, a multi-atlas file is parsed and the name of the image's file will be changed to use a content-hash.
+* The NPM `build` script calls the `phaser-asset-pack-hashing` tool. It parses all pack files in the `dist/` folder and transforms the internal URL, adding the content-hash to the query string. It also parses files referenced by the pack. For example, a multi-atlas file is parsed and the name of the image's file will be changed to use a content-hash.
 
 Learn more about the [phaser-asset-pack-hashing](https://www.npmjs.com/package/phaser-asset-pack-hashing) tool.
 
@@ -154,3 +154,4 @@ The Scenes and User Components are configured to compile to TypeScript ES module
 ## Author
 
 Created and maintained by the Phaser Editor 2D team.
+
