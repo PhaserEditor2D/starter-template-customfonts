@@ -3,6 +3,8 @@ import Phaser from "phaser";
 import Level from "./scenes/Level";
 import preloadAssetPackUrl from "../static/assets/preload-asset-pack.json";
 import Preload from "./scenes/Preload";
+import { WebFontFile } from "./fileloaders/WebFontFile";
+import WebFont from "webfontloader";
 
 class Boot extends Phaser.Scene {
 
@@ -20,6 +22,12 @@ class Boot extends Phaser.Scene {
        this.scene.start("Preload");
     }
 }
+
+// register "webfont" to the loader plugin: `this.load.webfont(key, config)`
+Phaser.Loader.LoaderPlugin.prototype.webfont = function (key: string, config?: WebFont.Config) {
+
+	this.addFile(new WebFontFile(this, key, config));
+};
 
 window.addEventListener('load', function () {
 	

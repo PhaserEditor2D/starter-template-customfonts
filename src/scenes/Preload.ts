@@ -47,8 +47,19 @@ export default class Preload extends Phaser.Scene {
 
 		this.editorCreate();
 
-		// load the files
-		this.load.addFile(new WebFontFile(this.load, ["troika", "Caroni"]));
+		// here two variants for loading a font:
+		
+		// 1. providing the full configuration:
+		
+		this.load.webfont("troika", {
+			custom: {
+				families: ["troika"]
+			}
+		});
+
+		// 2. only providing the key, which is used as font family
+
+		this.load.webfont("caroni");
 
 		this.load.pack("asset-pack", assetPackUrl);
 

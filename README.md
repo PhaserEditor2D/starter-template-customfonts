@@ -1,8 +1,8 @@
-# Webpack + TypeScript project template for Phaser Editor 2D
+# Project template for Phaser Editor 2D, with custom web fonts
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-908a85?logo=gitpod)](https://gitpod.io/#https://github.com/PhaserEditor2D/starter-template-webpack)
 
-A project template for Phaser 3, Webpack 5, TypeScript, and Phaser Editor 2D v3.
+A project template for loading web fonts into a Phaser game and the Phaser Editor 2D's Scene Editor.
 
 ## First steps
 
@@ -57,7 +57,55 @@ This project requires [Node.js](https://nodejs.org) and [NPM.js](https://www.npm
     $ PhaserEditor2D -project .
     ```
 
-## Phaser Editor 2D considerations
+## WebFont loading
+
+This project uses the [WebFontLoader](https://github.com/typekit/webfontloader) library for loading web fonts.
+
+There are two parts in this project:
+
+1- A plugin for loading the fonts into the editor.
+2- The code for loading the fonts into the game.
+
+### Loading the fonts into the editor
+
+It is important to load the same fonts into the editor so you can see the texts as they are rendered in the game.
+
+For doing this, I created the `fontsloader` plugin, in the `phasereditor2d-plugins` folder. Look in the `phasereditor2d.config.json` file I configured the plugins path to `phasereditor2d-plugins`.
+
+Here I'm not going to explain how the Phaser Editor 2D plugins work. But you can take a look to the files in the plugin. What it does is: 
+
+* Load the styles with the font definitions (`phasereditor2d-plugins/fontsloader/`). It `@import` the same `fonts.css` file of the game.
+
+* Load the WebFontLoader library (`phasereditor2d-plugins/fontsloader/lib/webfontloader-1.6.28.js`).
+
+* Uses the WebFontLoader library for loading the font.
+
+For loading new fonts, you should add them in the `phasereditor2d-plugins/fontsloader/main.js` file.
+
+## Loading the fonts in the game
+
+I load the fonts in the game using a standard method, that is compatible with any Phaser game.
+
+For loading new fonts, you have to:
+
+* Copy the fonts to the `src/fonts` folder (in case you are loading it from the project and not from the Internet).
+* Update the `fonts/fonts.css` file, with the new `@font-face`.
+* Finally, use the Phaser Loader for loading the fonts:
+
+    ```javascript
+    this.load.webfont("myNewFont", {
+        custom: {
+            families: ["NewFont"]
+        }
+    });
+    ```
+
+    The `webfont(key, config)` method receives a `key` and a `config` parameter. The `config` parameter is the same of the [WebFontLoader](https://github.com/typekit/webfontloader) library.
+
+    This method is added to the Phaser Loader in the `index.ts` file.
+
+
+## General Phaser Editor 2D considerations
 
 ### Excluding files from the project
 

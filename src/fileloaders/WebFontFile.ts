@@ -1,32 +1,36 @@
 import WebFont from "webfontloader";
 
-// Inspired by the Ourcade demo:
-// https://blog.ourcade.co/posts/2020/phaser-3-google-fonts-webfontloader/
-
 export class WebFontFile extends Phaser.Loader.File {
 
-    private _families: string[];
+    private _config?: WebFont.Config;
 
-    constructor(loader: Phaser.Loader.LoaderPlugin, families: string[]) {
+    constructor(loader: Phaser.Loader.LoaderPlugin, key: string, config?: WebFont.Config) {
         super(loader, {
             type: "webfont",
-            key: "webfont__" + families.join("-")
+            key: key
         });
 
-        this._families = families;
+        this._config = config;
     }
 
     load(): void {
 
-        WebFont.load({
-            custom: {
-                families: this._families
-            },
-            active: () => {
+        const config: WebFont.Config = {};
 
-                this.loader.nextFile(this, true);
-            }
-        });
+        if (this._config) {
+
+            Object.assign(config, this._config);
+
+        } else {
+
+            config.custom = {
+                families: [this.key]
+            };
+        }
+
+        config.active = () => this.loader.nextFile(this, true);
+        config.inactive = () => this.loader.nextFile(this, false);
+
+        WebFont.load(config);
     }
 }
-WebFont.load({});

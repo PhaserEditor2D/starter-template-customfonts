@@ -12,6 +12,10 @@ class FontsLoaderPlugin extends colibri.Plugin {
 
             await new Promise((resolver, reject) => {
 
+                // Here you configure the fonts loading.
+                // Please, take a look to the WebFont documentation here:
+                // https://github.com/typekit/webfontloader
+
                 WebFont.load({
                     custom: {
                         families: ["troika", "Caroni"]
