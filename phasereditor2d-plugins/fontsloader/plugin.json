@@ -1,0 +1,10 @@
+{
+    "id": "fontsloader",
+    "styles": [
+        "styles.css"
+    ],
+    "scripts": [
+        "lib/webfontloader-1.6.28.js",
+        "main.js"
+    ]
+}

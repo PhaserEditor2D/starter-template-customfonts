@@ -1,0 +1,10 @@
+{
+    "plugins": [
+        "phasereditor2d-plugins"
+    ],
+    "skip": [
+        "dist",
+        "phasereditor2d-plugins"
+    ],
+    "playUrl": "http://localhost:8080"
+}
