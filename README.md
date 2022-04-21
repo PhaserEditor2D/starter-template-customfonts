@@ -1,4 +1,4 @@
-# Project template for Phaser Editor 2D, with custom web fonts
+# Project template with custom web fonts
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-908a85?logo=gitpod)](https://gitpod.io/#https://github.com/PhaserEditor2D/starter-template-webpack)
 
@@ -82,7 +82,7 @@ Here I'm not going to explain how the Phaser Editor 2D plugins work. But you can
 
 For loading new fonts, you should add them in the `phasereditor2d-plugins/fontsloader/main.js` file.
 
-## Loading the fonts in the game
+### Loading the fonts in the game
 
 I load the fonts in the game using a standard method, that is compatible with any Phaser game.
 
