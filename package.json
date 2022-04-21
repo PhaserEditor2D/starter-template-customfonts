@@ -13,14 +13,18 @@
   "author": "Phaser Editor 2D <developers@phasereditor2d.com> (https://phasereditor2d.com/)",
   "license": "MIT",
   "dependencies": {
-    "phaser": "^3.55.0"
+    "phaser": "^3.55.0",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
+    "@types/webfontloader": "^1.6.34",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^8.1.0",
+    "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.3.1",
     "phaser-asset-pack-hashing": "^1.0.5",
     "phasereditor2d-launcher": "^3.32.0",
+    "style-loader": "^3.3.1",
     "ts-loader": "^8.0.18",
     "typescript": "^4.2.3",
     "webpack": "^5.28.0",

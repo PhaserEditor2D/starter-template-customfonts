@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "troika";
+    src: url("./troika.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Caroni";
+    src: url("./caroni.otf") format("opentype");
+}

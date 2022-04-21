@@ -1,3 +1,4 @@
+import "./fonts/fonts.css";
 import Phaser from "phaser";
 import Level from "./scenes/Level";
 import preloadAssetPackUrl from "../static/assets/preload-asset-pack.json";

@@ -7,6 +7,7 @@ import Phaser from "phaser";
 import PreloadText from "../components/PreloadText";
 /* START-USER-IMPORTS */
 import assetPackUrl from "../../static/assets/asset-pack.json";
+import { WebFontFile } from "../fileloaders/WebFontFile";
 /* END-USER-IMPORTS */
 
 export default class Preload extends Phaser.Scene {
@@ -45,6 +46,9 @@ export default class Preload extends Phaser.Scene {
 	preload() {
 
 		this.editorCreate();
+
+		// load the files
+		this.load.addFile(new WebFontFile(this.load, ["troika", "Caroni"]));
 
 		this.load.pack("asset-pack", assetPackUrl);
 
