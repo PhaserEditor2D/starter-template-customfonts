@@ -1,35 +1,38 @@
-class FontsLoaderPlugin extends colibri.Plugin {
+window.addEventListener("load", () => {
 
-    constructor() {
-        super("fontsloader");
-    }
+    class FontsLoaderPlugin extends colibri.Plugin {
 
-    registerExtensions(reg) {
+        constructor() {
+            super("fontsloader");
+        }
 
-        reg.addExtension(new colibri.ui.ide.PluginResourceLoaderExtension(async () => {
+        registerExtensions(reg) {
 
-            console.log("FontsLoader: start loading...");
+            reg.addExtension(new colibri.ui.ide.PluginResourceLoaderExtension(async () => {
 
-            await new Promise((resolver, reject) => {
+                console.log("FontsLoader: start loading...");
 
-                // Here you configure the fonts loading.
-                // Please, take a look to the WebFont documentation here:
-                // https://github.com/typekit/webfontloader
+                await new Promise((resolve, reject) => {
 
-                WebFont.load({
-                    custom: {
-                        families: ["troika", "Caroni"]
-                    },
-                    active: () => {
+                    // Here you configure the fonts loading.
+                    // Please, take a look to the WebFont documentation here:
+                    // https://github.com/typekit/webfontloader
 
-                        console.log("FontsLoader: done!");
+                    WebFont.load({
+                        custom: {
+                            families: ["troika", "Caroni"]
+                        },
+                        active: () => {
 
-                        resolver(undefined);
-                    }
+                            console.log("FontsLoader: done!");
+
+                            resolve(undefined);
+                        }
+                    });
                 });
-            });
-        }));
+            }));
+        }
     }
-}
 
-colibri.Platform.addPlugin(new FontsLoaderPlugin());
+    colibri.Platform.addPlugin(new FontsLoaderPlugin());
+});
