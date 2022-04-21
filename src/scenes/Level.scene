@@ -35,7 +35,8 @@
             "text": "Phaser Editor 2D\nWebpack + TypeScript",
             "align": "center",
             "fontFamily": "caroni",
-            "fontSize": "3em"
+            "fontSize": "3em",
+            "color": "#8ee391ff"
         },
         {
             "type": "Text",
@@ -46,7 +47,8 @@
             "y": 208,
             "text": "Phaser 3",
             "fontFamily": "troika",
-            "fontSize": "32px"
+            "fontSize": "32px",
+            "color": "#48ece3ff"
         },
         {
             "type": "Text",
@@ -55,9 +57,13 @@
             "components": [],
             "x": 448.83333333333337,
             "y": 349,
+            "tintTopLeft": "#8e8ffe",
+            "tintBottomLeft": "#4f98fb",
+            "tintBottomRight": "#aa73f1",
             "text": "FontsLoader",
             "fontFamily": "troika",
-            "fontSize": "32px"
+            "fontSize": "32px",
+            "color": "#a6a5f4ff"
         }
     ],
     "plainObjects": [],

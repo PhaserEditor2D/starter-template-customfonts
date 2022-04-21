@@ -27,17 +27,20 @@ export default class Level extends Phaser.Scene {
 		const text = this.add.text(541.8333333333334, 295, "", {});
 		text.setOrigin(0.5, 0.5);
 		text.text = "Phaser Editor 2D\nWebpack + TypeScript";
-		text.setStyle({ "align": "center", "fontFamily": "caroni", "fontSize": "3em" });
+		text.setStyle({ "align": "center", "color": "#8ee391ff", "fontFamily": "caroni", "fontSize": "3em" });
 
 		// text_1
 		const text_1 = this.add.text(479.33333333333337, 208, "", {});
 		text_1.text = "Phaser 3";
-		text_1.setStyle({ "fontFamily": "troika", "fontSize": "32px" });
+		text_1.setStyle({ "color": "#48ece3ff", "fontFamily": "troika", "fontSize": "32px" });
 
 		// text_2
 		const text_2 = this.add.text(448.83333333333337, 349, "", {});
+		text_2.tintTopLeft = 9342974;
+		text_2.tintBottomLeft = 5216507;
+		text_2.tintBottomRight = 11170801;
 		text_2.text = "FontsLoader";
-		text_2.setStyle({ "fontFamily": "troika", "fontSize": "32px" });
+		text_2.setStyle({ "color": "#a6a5f4ff", "fontFamily": "troika", "fontSize": "32px" });
 
 		// fufuSuperDino (components)
 		new PushOnClick(fufuSuperDino);
