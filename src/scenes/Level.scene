@@ -7,7 +7,9 @@
         "preloadPackFiles": [],
         "createMethodName": "editorCreate",
         "sceneKey": "Level",
-        "compilerOutputLanguage": "TYPE_SCRIPT"
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "borderWidth": 1280,
+        "borderHeight": 720
     },
     "displayList": [
         {
@@ -20,50 +22,72 @@
             "texture": {
                 "key": "FufuSuperDino"
             },
-            "x": 309,
-            "y": 300
+            "x": 496,
+            "y": 336,
+            "list": [
+                {
+                    "prefabId": "a06ed60b-79f1-4444-bf35-89046f71f954",
+                    "id": "258d29d5-d1e2-47df-b8a2-755af7f928a4",
+                    "label": "onPointerDownScript",
+                    "components": [],
+                    "nestedPrefabs": [],
+                    "list": [
+                        {
+                            "prefabId": "0e39177a-6e19-4b56-a7c2-2360a2e41505",
+                            "id": "e4c4cefe-be77-42df-880d-62ca2fc1efcd",
+                            "label": "pushActionScript",
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": []
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "Text",
             "id": "5c228da6-971a-4347-84e8-9f62464ba76d",
             "label": "text",
             "components": [],
-            "x": 541.8333333333334,
-            "y": 295,
+            "x": 729,
+            "y": 331,
             "originX": 0.5,
             "originY": 0.5,
             "text": "Phaser Editor 2D\nWebpack + TypeScript",
             "align": "center",
             "fontFamily": "caroni",
             "fontSize": "3em",
-            "color": "#8ee391ff"
+            "color": "#8ee391ff",
+            "list": []
         },
         {
             "type": "Text",
             "id": "3ee714ce-c9d4-47e0-b723-5eb54b4138c9",
             "label": "text_1",
             "components": [],
-            "x": 479.33333333333337,
-            "y": 208,
+            "x": 666,
+            "y": 244,
             "text": "Phaser 3",
             "fontFamily": "troika",
             "fontSize": "32px",
-            "color": "#48ece3ff"
+            "color": "#48ece3ff",
+            "list": []
         },
         {
             "type": "Text",
             "id": "0daff973-3e17-4d1d-9af4-0176dc05a1e4",
             "label": "text_2",
             "components": [],
-            "x": 448.83333333333337,
-            "y": 349,
+            "x": 636,
+            "y": 385,
             "tintTopLeft": "#8e8ffe",
             "tintBottomLeft": "#4f98fb",
             "tintBottomRight": "#aa73f1",
             "text": "FontsLoader",
             "fontFamily": "troika",
             "fontSize": "32px",
-            "color": "#a6a5f4ff"
+            "color": "#a6a5f4ff",
+            "list": []
         }
     ],
     "plainObjects": [],
