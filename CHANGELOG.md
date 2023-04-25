@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.2.1 - Apr 24, 2023
+
+* Gets latest script nodes.
+
 ## v1.2.0 - Apr 18, 2023
 
 * Updates to Phaser 3.60.
