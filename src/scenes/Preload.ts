@@ -73,8 +73,24 @@ export default class Preload extends Phaser.Scene {
 		this.load.webfont("caroni");
 
 		this.load.pack("asset-pack", assetPackUrl);
+	}
 
-		this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("Level"));
+	create() {
+
+		if (process.env.NODE_ENV === "development") {
+
+			const start = new URLSearchParams(location.search).get("start");
+
+			if (start) {
+
+				console.log(`Development: jump to ${start}`);
+				this.scene.start(start);
+
+				return;
+			}
+		}
+
+		this.scene.start("Level");
 	}
 
 	/* END-USER-CODE */
