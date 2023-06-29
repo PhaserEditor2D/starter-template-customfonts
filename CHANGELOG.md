@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.2.3 - Jun 29, 2023
+
+* Gets latest script nodes.
+* Adds events.txt file.
+
 ## v1.2.2 - Apr 26, 2023
 
 * Supports the `start=<scene>` URL parameter.
