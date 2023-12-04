@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.3.0 - Sep 30, 3033
+
+* Migrates to the new Scripts libraries.
+
 ## v1.2.5 - Sep 30, 2023
 
 * Updates Gitpod config.
