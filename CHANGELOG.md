@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.3.0 - Sep 30, 3033
+## v1.3.0 - Dec 4, 3033
 
 * Migrates to the new Scripts libraries.
 
