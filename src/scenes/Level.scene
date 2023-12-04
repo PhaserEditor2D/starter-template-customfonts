@@ -29,16 +29,31 @@
                     "prefabId": "a06ed60b-79f1-4444-bf35-89046f71f954",
                     "id": "258d29d5-d1e2-47df-b8a2-755af7f928a4",
                     "label": "onPointerDownScript",
-                    "components": [],
-                    "nestedPrefabs": [],
                     "list": [
                         {
                             "prefabId": "0e39177a-6e19-4b56-a7c2-2360a2e41505",
                             "id": "e4c4cefe-be77-42df-880d-62ca2fc1efcd",
-                            "label": "pushActionScript",
-                            "components": [],
-                            "nestedPrefabs": [],
-                            "list": []
+                            "label": "pushActionScript"
+                        }
+                    ]
+                },
+                {
+                    "prefabId": "7028a0e2-cd14-44b7-b2a4-68dac16ece00",
+                    "id": "68de5d38-9d00-445d-803c-d89aaca18721",
+                    "label": "onAwakeScript",
+                    "list": [
+                        {
+                            "prefabId": "978fd4e0-a722-4061-a6d9-86748db8a38a",
+                            "id": "9c5039b5-1b4c-4e5f-ba92-e625c2f4f538",
+                            "unlock": [
+                                "fadeDirection"
+                            ],
+                            "label": "fadeActionScript",
+                            "fadeDirection": "FadeIn",
+                            "components": [
+                                "DurationConfigComp"
+                            ],
+                            "DurationConfigComp.duration": 10000
                         }
                     ]
                 }
@@ -48,7 +63,6 @@
             "type": "Text",
             "id": "5c228da6-971a-4347-84e8-9f62464ba76d",
             "label": "text",
-            "components": [],
             "x": 729,
             "y": 331,
             "originX": 0.5,
@@ -58,26 +72,70 @@
             "fontFamily": "caroni",
             "fontSize": "3em",
             "color": "#8ee391ff",
-            "list": []
+            "list": [
+                {
+                    "prefabId": "7028a0e2-cd14-44b7-b2a4-68dac16ece00",
+                    "id": "c4b5f49b-8171-49c3-ac3d-755a2bf20063",
+                    "label": "onAwakeScript_3",
+                    "list": [
+                        {
+                            "prefabId": "3d337935-cdca-4937-9126-9f75bc2486de",
+                            "id": "1508877f-6f2c-48a6-9d63-f30f72364b17",
+                            "unlock": [
+                                "from"
+                            ],
+                            "label": "moveInSceneActionScript_2",
+                            "from": "RIGHT",
+                            "components": [
+                                "DelayConfigComp",
+                                "DurationConfigComp"
+                            ],
+                            "DelayConfigComp.delay": 1300,
+                            "DurationConfigComp.duration": 450
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "Text",
             "id": "3ee714ce-c9d4-47e0-b723-5eb54b4138c9",
             "label": "text_1",
-            "components": [],
             "x": 666,
             "y": 244,
             "text": "Phaser 3",
             "fontFamily": "troika",
             "fontSize": "32px",
             "color": "#48ece3ff",
-            "list": []
+            "list": [
+                {
+                    "prefabId": "7028a0e2-cd14-44b7-b2a4-68dac16ece00",
+                    "id": "d3c72438-dc3e-4174-a5ed-71fac355eb9d",
+                    "label": "onAwakeScript_2",
+                    "list": [
+                        {
+                            "prefabId": "3d337935-cdca-4937-9126-9f75bc2486de",
+                            "id": "3fcf6355-1fba-442c-8780-f0fb3330617d",
+                            "unlock": [
+                                "from"
+                            ],
+                            "label": "moveInSceneActionScript_1",
+                            "from": "RIGHT",
+                            "components": [
+                                "DelayConfigComp",
+                                "DurationConfigComp"
+                            ],
+                            "DelayConfigComp.delay": 1000,
+                            "DurationConfigComp.duration": 450
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "Text",
             "id": "0daff973-3e17-4d1d-9af4-0176dc05a1e4",
             "label": "text_2",
-            "components": [],
             "x": 636,
             "y": 385,
             "tintTopLeft": "#8e8ffe",
@@ -87,7 +145,30 @@
             "fontFamily": "troika",
             "fontSize": "32px",
             "color": "#a6a5f4ff",
-            "list": []
+            "list": [
+                {
+                    "prefabId": "7028a0e2-cd14-44b7-b2a4-68dac16ece00",
+                    "id": "de50b0bb-f8af-4017-8e8a-815a6cd1fece",
+                    "label": "onAwakeScript_1",
+                    "list": [
+                        {
+                            "prefabId": "3d337935-cdca-4937-9126-9f75bc2486de",
+                            "id": "a8ace09f-6619-4c7f-981c-0f30e4a9184e",
+                            "unlock": [
+                                "from"
+                            ],
+                            "label": "moveInSceneActionScript",
+                            "from": "RIGHT",
+                            "components": [
+                                "DelayConfigComp",
+                                "DurationConfigComp"
+                            ],
+                            "DelayConfigComp.delay": 1600,
+                            "DurationConfigComp.duration": 450
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "plainObjects": [],
@@ -95,6 +176,6 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     }
 }
