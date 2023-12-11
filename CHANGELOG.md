@@ -3,6 +3,7 @@
 ## v1.3.0 - Dec 4, 3033
 
 * Migrates to the new Scripts libraries.
+* Doesn't include `package-lock.json` file.
 
 ## v1.2.5 - Sep 30, 2023
 
