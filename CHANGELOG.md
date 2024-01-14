@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.3.1 - Jan 14, 2024
+
+* Updates script libraries.
+
 ## v1.3.0 - Dec 4, 3033
 
 * Migrates to the new Scripts libraries.
